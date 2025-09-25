@@ -1,0 +1,12 @@
+{
+  "name": "supreme-production-toolkit",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix ./client install && npm --prefix ./server install",
+    "dev": "concurrently \"npm --prefix ./client run dev\" \"npm --prefix ./server run dev\"",
+    "start": "node ./server/dist/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
